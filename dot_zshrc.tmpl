@@ -1,0 +1,22 @@
+# Minimal server shell config
+eval "$(zoxide init --cmd cd zsh)"
+
+alias cat='bat 2>/dev/null || cat'
+
+export RIPGREP_CONFIG_PATH=~/.ripgreprc
+HISTSIZE=200000
+SAVEHIST=200000
+HISTFILE=~/.zsh_history
+
+# Secrets loaded from ~/.env (not checked into git)
+if [ -f ~/.env ]; then
+  set -a; source ~/.env; set +a
+fi
+
+# Ollama config — bind to loopback ONLY (Tailscale Serve handles remote access)
+export OLLAMA_HOST=127.0.0.1
+export OLLAMA_FLASH_ATTENTION=1
+export OLLAMA_KV_CACHE_TYPE=q8_0
+
+# Node.js (for OpenClaw)
+export PATH="/opt/homebrew/opt/node@24/bin:$PATH"
