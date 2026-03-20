@@ -1,2 +1,1 @@
-# Paste your laptop's public SSH key here (from: cat ~/.ssh/id_ed25519.pub)
-# Example: ssh-ed25519 AAAAC3... kieran@laptop
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHfS+cgERYvw0cc60fC1SCKIw9tztYe/k7kj2iNE+3uN kieran@macbook
