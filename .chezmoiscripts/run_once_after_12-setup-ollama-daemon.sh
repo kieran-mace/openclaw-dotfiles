@@ -19,6 +19,8 @@ sudo tee "$PLIST_PATH" > /dev/null << 'PLIST'
     </array>
     <key>EnvironmentVariables</key>
     <dict>
+        <key>HOME</key>
+        <string>/var/root</string>
         <key>OLLAMA_HOST</key>
         <string>127.0.0.1:11434</string>
         <key>OLLAMA_FLASH_ATTENTION</key>
